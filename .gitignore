@@ -1,0 +1,22 @@
+# 默认忽略工作区里的所有内容，仅跟踪本项目（DTBO Tuner）相关文件。
+# 这样仓库保持干净：不会把设备镜像、构建缓存、临时日志、私钥等无关内容提交进去。
+
+*
+
+# 项目源码与构建定义
+!dtbo_tuner.py
+!DTBO-Tuner.spec
+!README.md
+!LICENSE
+
+# 仅纳入运行/打包所必需的 Android platform-tools（spec 的 binaries 与运行时都依赖它）
+!tools/
+!tools/platform-tools/
+!tools/platform-tools/**
+
+# CI 构建工作流
+!.github/
+!.github/**
+
+# 让本文件自身可被跟踪
+!.gitignore
